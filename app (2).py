@@ -82,8 +82,8 @@ with st.sidebar:
     """)
 
     st.divider()
-    st.caption("Research Grant: Dashboard System for Routing Optimization "
-               "of E-Waste Collection in Smart Reverse Logistics")
+    st.caption("Research Grant: Penelitian Pemula BINUS (PPB) 2026"
+               "Contract number: 066/VRRTT/IV/2026")
 
 # ============================================================
 # SECTION 1 — E-WASTE WEIGHT INPUT
