@@ -24,8 +24,8 @@ C_FUEL  = 680         # Rp/km (solar Rp6.800 / 10 km per liter)
 
 # PARAMETER KAPASITAS
 Q_MAX   = 2_000       # kg, kapasitas maksimal per kendaraan
-Q_MIN   = 1_000       # kg, minimum load per kendaraan
-W_MIN   = 10          # kg, minimum bobot lokasi agar eligible
+Q_MIN   = 500         # kg, minimum load per kendaraan
+W_MIN   = 5           # kg, minimum bobot lokasi agar eligible
 K_MAX   = 3           # jumlah armada maksimal
 
 # PARAMETER LNS
