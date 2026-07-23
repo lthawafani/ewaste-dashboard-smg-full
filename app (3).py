@@ -163,7 +163,7 @@ if HAS_KECAMATAN:
                         label = nama if len(nama) <= 35 else nama[:33] + "..."
                        #---------------------------tambahan 
                         if f"weight_{loc_id}" not in st.session_state:
-    st.session_state[f"weight_{loc_id}"] = 0.0
+                            st.session_state[f"weight_{loc_id}"] = 0.0
     
                         w = st.number_input(
                             label=f"**{label}**",
