@@ -24,15 +24,15 @@ C_FUEL  = 680         # Rp/km (solar Rp6.800 / 10 km per liter)
 
 # PARAMETER KAPASITAS
 Q_MAX   = 2_000       # kg, kapasitas maksimal per kendaraan
-Q_MIN   = 500         # kg, minimum load per kendaraan
+Q_MIN   = 50         # kg, minimum load per kendaraan
 W_MIN   = 5           # kg, minimum bobot lokasi agar eligible
 K_MAX   = 3           # jumlah armada maksimal
 
 # PARAMETER LNS
 P_WORST = 0.6         # probabilitas pilih Worst Removal
 P_RAND  = 0.4         # probabilitas pilih Random Removal
-RHO     = 0.2         # proporsi node yang di-remove tiap iterasi (20%)
-N_STAG  = 100         # stopping: berhenti jika tidak ada improvement
+RHO     = 0.3         # proporsi node yang di-remove tiap iterasi (20%)
+N_STAG  = 300         # stopping: berhenti jika tidak ada improvement
                       # dalam N_STAG iterasi berturut-turut
 
 
