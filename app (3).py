@@ -83,7 +83,7 @@ with st.sidebar:
     st.divider()
     st.caption("Research Grant: Dashboard System for Routing Optimization "
                "of E-Waste Collection in Smart Reverse Logistics"
-              "with contract number: 066/VRRTT/IV/2026.")
+              " with contract number: 066/VRRTT/IV/2026.")
 
 # ============================================================
 # SESSION STATE INIT
