@@ -112,8 +112,11 @@ col_btn1, col_btn2, col_btn3 = st.columns([1, 1, 4])
 
 with col_btn1:
     if st.button("🔄 Reset All to Zero", use_container_width=True):
-        for loc_id in st.session_state.weights:
-            st.session_state.weights[loc_id] = 0.0
+       # for loc_id in st.session_state.weights:
+        #    st.session_state.weights[loc_id] = 0.0
+        for _, row in loc_nondepo.iterrows():
+        loc_id = int(row['id'])
+        st.session_state[f"weight_{loc_id}"] = 0.0
         st.rerun()
 
 with col_btn2:
@@ -126,7 +129,8 @@ with col_btn2:
                if has_previous else "No previous cycle data available"
     ):
         for loc_id, w in st.session_state.last_skipped.items():
-            st.session_state.weights[loc_id] = w
+           # st.session_state.weights[loc_id] = w
+            st.session_state[f"weight_{loc_id}"] = w
         st.rerun()
 
 st.markdown("")
@@ -157,17 +161,22 @@ if HAS_KECAMATAN:
                         # Truncate nama untuk label
                         nama = loc['nama']
                         label = nama if len(nama) <= 35 else nama[:33] + "..."
+                       #---------------------------tambahan 
+                        if f"weight_{loc_id}" not in st.session_state:
+    st.session_state[f"weight_{loc_id}"] = 0.0
+    
                         w = st.number_input(
                             label=f"**{label}**",
                             min_value=0.0,
                             max_value=float(Q_MAX),
-                            value=current_val,
+                            #value=current_val,
                             step=1.0,
                             key=f"weight_{loc_id}",
                             help=nama  # full name on hover
                         )
-                        st.session_state.weights[loc_id] = w
-                        weights_input[loc_id] = w
+                        #st.session_state.weights[loc_id] = w
+                       # weights_input[loc_id] = w
+                        weights_input[loc_id] = st.session_state[f"weight_{loc_id}"]
 else:
     # Fallback: tanpa grouping kecamatan
     cols_per_row = 3
