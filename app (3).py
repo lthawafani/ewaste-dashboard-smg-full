@@ -115,8 +115,8 @@ with col_btn1:
        # for loc_id in st.session_state.weights:
         #    st.session_state.weights[loc_id] = 0.0
         for _, row in loc_nondepo.iterrows():
-        loc_id = int(row['id'])
-        st.session_state[f"weight_{loc_id}"] = 0.0
+            loc_id = int(row['id'])
+            st.session_state[f"weight_{loc_id}"] = 0.0
         st.rerun()
 
 with col_btn2:
